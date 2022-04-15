@@ -23,7 +23,7 @@ Two models that reduce bias were performed using:
 
 ## Results
 
-All models showed extremely low precision (< 0.08) high risk loans. Recall for high risk loans ranged form   ...
+All models showed extremely low precision (< 0.08) for high risk loans. Recall for most high risk loans ranged from 0.59 to 0.67, except for the Easy Ensemble AdaBoost Classifier where recall was 0.91.  F1 scores for high risk loans ranged from 0.01 to 0.14 across the models tested.  For low risk loans, precision was found to be 1.00 for all models tested but recall ranged from 0.43 to 0.65 for those where data were oversampled, undersampled, or a combinatorial approach was used.  Recall when using the Balanced Random Forest Classifier and Easy Ensemble AdaBoost Classifier was much improved at 0.91 and 0.94, respectively.  F1 scores for low risk loans ranged from 0.60 to 0.97.  Balanced accuracy scores ranged from 0.51 to 0.925. Individual results were as follows:
 
 - Naive Random Oversampling.  The balanced accuracy score was 0.637.  Precision and recall for high risk loans were 0.01 and 0.62, respectively.  F1 for high risk loans was 0.02.  Precision and recall for low risk loans were 1.00 and 0.65, respectively.  F1 for low risk loans was 0.79 (Fig. 1).
 
@@ -89,3 +89,9 @@ Fig. 6.  **Easy Ensemble AdaBoost Classifier.** Confusion matrix, balanced accur
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Summary
+Naive Random Oversampling, SMOTE, Cluster Centroids, and SMOTEENN performed similarly in that they all demonstrated a precision of 0.01 for high risk loans and a precision of 1.0 for low risk loans, with mid-range recall scores for high- and low risk loans. F1 values for high risk loans ranged from 0.01 to 0.02, whereas F1 values ranged from 0.60 to 0.79 for low risk loans.  Balanced accuracy scores ranged from 0.51 to 0.637.
+
+The two models that reduce bias, Balanced Random Forest Classifier and Easy Ensemble AdaBoost Classifier, showed improved results with respect to recall for both high- (especially) and low risk loans, but precision for high risk loans was still <= 0.07 for both.  F1 values for high risk loans were <= 0.14 even though F1 values for low risk loans were >= 0.95. Balanced accuracy scores were >= 0.91 for both.
+
+None of the models are recommended given the extremely low precision values (<= 0.07) for determining high risk loans.   Even though the Easy Ensemble AdaBoost Classifier produced high values for balanced accuracy scores and recall values for high- and low risk loans, the low precision of 0.07 for detecting high risk loan applications renders this an unuseful model. 
+
