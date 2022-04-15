@@ -23,7 +23,7 @@ Two models that reduce bias were performed using:
 
 ## Results
 
-Overall results showed that ...
+All models showed extremely low precision (< 0.08) high risk loans. Recall for high risk loans ranged form   ...
 
 - Naive Random Oversampling.  The balanced accuracy score was 0.637.  Precision and recall for high risk loans were 0.01 and 0.62, respectively.  F1 for high risk loans was 0.02.  Precision and recall for low risk loans were 1.00 and 0.65, respectively.  F1 for low risk loans was 0.79 (Fig. 1).
 
